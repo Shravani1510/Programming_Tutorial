@@ -15,13 +15,31 @@ public class ExceptionHandling {
 
 		int a = 5;
 		int b = 0;
+		try {
 		int div = a/b;
+		}catch(ArithmeticException e) {
+			System.err.println("An arithmetic Exception occured");
+			e.printStackTrace();	
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+		}
+		
 		
 		int[] arr = new int[5];
+		try {
 		arr[5] = 7;
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.err.println(" Array Index out of bounce Exception occured ");
+			e.printStackTrace();
+		}
 		
 		String one = "one";
+		try {
 		int i = Integer.parseInt(one);
+		}catch(NumberFormatException e) {
+			System.err.println(" Number Formate Exception");
+			e.printStackTrace();
+		}
 		
 		double c = -7.0;
 		double d = Math.sqrt(c);
